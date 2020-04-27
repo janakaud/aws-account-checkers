@@ -1,0 +1,113 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "e6bda370-25eb-4540-8588-0e822d49eca9": {
+        "id": "e6bda370-25eb-4540-8588-0e822d49eca9",
+        "parent": null,
+        "name": "cf-stacks-checker.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "cf-stacks-checker.js",
+        "cursor": {
+          "lineNumber": 4,
+          "column": 2
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "CFStacksChecker",
+          "description": "Checks CloudFormation stacks in all regions * accounts"
+        },
+        "triggers": [],
+        "testCases": {
+          "62400c85-0c90-4a9b-93bd-15b7b2c07459": {
+            "id": "62400c85-0c90-4a9b-93bd-15b7b2c07459",
+            "name": "t",
+            "functionId": "e6bda370-25eb-4540-8588-0e822d49eca9",
+            "event": "{}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "35f05654-e5d6-405f-a272-d5e71c259642": {
+        "id": "35f05654-e5d6-405f-a272-d5e71c259642",
+        "parent": null,
+        "name": "billed-resources-checker.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "billed-resources-checker.js",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 3
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "BilledResourcesChecker",
+          "description": "Checks for long-lived billed resources (EC2, RDS etc.)"
+        },
+        "triggers": []
+      },
+      "a9048632-5efe-4d84-8171-31bb84734673": {
+        "id": "a9048632-5efe-4d84-8171-31bb84734673",
+        "parent": null,
+        "name": "README.md",
+        "type": "MARKDOWN_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "README.md"
+      }
+    },
+    "openFiles": [
+      "e6bda370-25eb-4540-8588-0e822d49eca9",
+      "35f05654-e5d6-405f-a272-d5e71c259642"
+    ],
+    "currentFileId": "e6bda370-25eb-4540-8588-0e822d49eca9",
+    "resources": {},
+    "customTemplate": {
+      "dialect": "CloudFormation",
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "DO-NOT-DELETE-aws-checkers",
+    "projectDescription": "Checks resources in AWS accounts",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1587955540848
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "aws-account-checkers",
+      "url": "https://github.com/janakaud/aws-account-checkers"
+    }
+  }
+}
