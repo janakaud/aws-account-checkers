@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "cf-stacks-checker.js",
         "cursor": {
-          "lineNumber": 4,
-          "column": 2
+          "lineNumber": 5,
+          "column": 13
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -27,12 +27,13 @@
         "testCases": {
           "62400c85-0c90-4a9b-93bd-15b7b2c07459": {
             "id": "62400c85-0c90-4a9b-93bd-15b7b2c07459",
-            "name": "t",
+            "name": "CF",
             "functionId": "e6bda370-25eb-4540-8588-0e822d49eca9",
             "event": "{}",
             "eventTemplate": "hello-world"
           }
-        }
+        },
+        "lastUpdated": 1598706012165
       },
       "35f05654-e5d6-405f-a272-d5e71c259642": {
         "id": "35f05654-e5d6-405f-a272-d5e71c259642",
@@ -44,8 +45,8 @@
         "isRemovable": true,
         "filePath": "billed-resources-checker.js",
         "cursor": {
-          "lineNumber": 1,
-          "column": 3
+          "lineNumber": 6,
+          "column": 1
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -56,7 +57,17 @@
           "name": "BilledResourcesChecker",
           "description": "Checks for long-lived billed resources (EC2, RDS etc.)"
         },
-        "triggers": []
+        "triggers": [],
+        "lastUpdated": 1598706022329,
+        "testCases": {
+          "e5f97bf2-def8-479b-ac40-95620efaba38": {
+            "id": "e5f97bf2-def8-479b-ac40-95620efaba38",
+            "name": "Bill",
+            "functionId": "35f05654-e5d6-405f-a272-d5e71c259642",
+            "event": "{}",
+            "eventTemplate": "hello-world"
+          }
+        }
       },
       "a9048632-5efe-4d84-8171-31bb84734673": {
         "id": "a9048632-5efe-4d84-8171-31bb84734673",
@@ -66,18 +77,67 @@
         "isDirectory": false,
         "children": [],
         "isRemovable": true,
-        "filePath": "README.md"
+        "filePath": "README.md",
+        "lastUpdated": 1598706026791
+      },
+      "9279914f-ceea-4bb7-9672-f40802677511": {
+        "id": "9279914f-ceea-4bb7-9672-f40802677511",
+        "parent": null,
+        "name": "s3-buckets-checker.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "s3-buckets-checker.js",
+        "cursor": {
+          "lineNumber": 51,
+          "column": 7
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "s3BucketsChecker"
+        },
+        "triggers": [],
+        "lastUpdated": 1598681500759,
+        "testCases": {
+          "4fa1efe2-efd1-4033-a558-2f1709cc4ff4": {
+            "id": "4fa1efe2-efd1-4033-a558-2f1709cc4ff4",
+            "name": "S3",
+            "functionId": "9279914f-ceea-4bb7-9672-f40802677511",
+            "event": "{}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "c872b1ac-7b4b-42f0-af71-4aa6a205ea6e": {
+        "id": "c872b1ac-7b4b-42f0-af71-4aa6a205ea6e",
+        "parent": null,
+        "name": "util.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "util.js",
+        "lastUpdated": 1598702650596,
+        "cursor": {
+          "lineNumber": 65,
+          "column": 36
+        }
       }
     },
     "openFiles": [
-      "e6bda370-25eb-4540-8588-0e822d49eca9",
-      "35f05654-e5d6-405f-a272-d5e71c259642"
+      "a9048632-5efe-4d84-8171-31bb84734673"
     ],
-    "currentFileId": "e6bda370-25eb-4540-8588-0e822d49eca9",
+    "currentFileId": "a9048632-5efe-4d84-8171-31bb84734673",
     "resources": {},
     "customTemplate": {
       "dialect": "CloudFormation",
-      "definitions": null
+      "definitions": null,
+      "syntax": "JSON"
     },
     "envVariables": [
       {
@@ -87,6 +147,20 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "AWS_CREDS",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false
+      },
+      {
+        "lambdaId": "35f05654-e5d6-405f-a272-d5e71c259642",
+        "varKey": "SKIP_SVCS",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false
       }
     ],
     "packageJSON": {
@@ -94,6 +168,7 @@
     }
   },
   "PROJECT_META": {
+    "sigmaVersion": "1.4.3",
     "projectName": "DO-NOT-DELETE-aws-checkers",
     "projectDescription": "Checks resources in AWS accounts",
     "projectVersion": "1.0.0",
@@ -101,7 +176,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1587955540848
+    "lastSave": 1598682884723
   },
   "VCS_STATE": {
     "provider": "GitHub",
